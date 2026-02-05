@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Animation</title>
+
+    <style>
+        * {
+            font-family: Georgia, serif;
+        }
+
+        body {
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .name {
+            display: flex;
+            gap: 6px;
+        }
+
+        .letter {
+            font-size: 48px;
+            opacity: 0;
+            transform: translateX(-200px);
+            animation: letterMove 4s ease-in-out forwards;
+        }
+
+        .letter:nth-child(1) { color: #e63946; animation-delay: 0s; }
+        .letter:nth-child(2) { color: #f4a261; animation-delay: 0.2s; }
+        .letter:nth-child(3) { color: #2a9d8f; animation-delay: 0.4s; }
+        .letter:nth-child(4) { color: #457b9d; animation-delay: 0.6s; }
+        .letter:nth-child(5) { color: #e9c46a; animation-delay: 0.8s; }
+        .letter:nth-child(6) { color: #a8dadc; animation-delay: 1s; }
+
+        @keyframes letterMove {
+            0% {
+                transform: translateX(-200px);
+                opacity: 0;
+            }
+
+            30% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            60% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateX(300px);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="name">
+        <span class="letter">A</span>
+        <span class="letter">d</span>
+        <span class="letter">i</span>
+        <span class="letter">t</span>
+        <span class="letter">y</span>
+        <span class="letter">a</span>
+    </div>
+
+</body>
+</html>
